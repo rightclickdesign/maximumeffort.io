@@ -1,0 +1,17 @@
+---
+## Default vars and config
+
+repo_url: git@github.com:rightclickdesign/maximumeffort.io.git
+repo_version: master
+app_name: maximumeffort
+user_name: "{{ app_name }}"
+server_name: maximumeffort
+deploy_dir: "/var/www/{{ user_name }}"
+deploy_app_dir: "/var/www/{{ user_name }}/html" 
+deploy_log_dir: "{{ deploy_dir }}/logs"
+ssh_port: 1204
+ssh_config_file: "/etc/ssh/sshd_config"
+
+webserver_packages_list: 
+  - git
+  - nginx  

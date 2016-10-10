@@ -1,0 +1,18 @@
+---
+# Deploy the app!
+- name: clean up app directory
+  file: path={{ deploy_app_dir }}/ state=absent
+
+- name: create {{ deploy_app_dir }} directory
+  file: path={{ deploy_app_dir }} state=directory mode=0755
+
+- name: create {{ deploy_log_dir }} directory
+  file: path={{ deploy_log_dir }} state=directory mode=0755
+
+- name: transfer app using rsync
+  synchronize: 
+    src: ../src/ 
+    dest: "{{ deploy_app_dir }}"
+  tags:
+    - transfer-rsync
+  notify: Restart nginx

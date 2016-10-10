@@ -1,0 +1,6 @@
+[app-servers]
+maximumeffort.io
+
+[all:vars]
+# Sets the environment to staging (staging) or production (prod)
+env=prod
