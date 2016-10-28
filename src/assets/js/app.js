@@ -1,3 +1,0 @@
-/**
- * JavaScript for Maximum Effort
- */
