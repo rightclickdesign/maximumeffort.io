@@ -37,7 +37,8 @@ h6 {
   color: white;
   font-size: 3rem;
   line-height: 3.5rem;
-  font-weight: bold;
+  font-weight: 100;
+  text-transform: uppercase;
 }
 .me.masthead .slogan2 {
   color: white;
